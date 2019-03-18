@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Dashboard Of HRSA Training Data</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">HRSA</a>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <span data-feather="home"></span>
+                  HLI Stats <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hrsa.html">
+                  <span data-feather="users"></span>
+                  HRSA Stats
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="peopleStats.html">
+                  <span data-feather="pie-chart"></span>
+                 People Stats
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="historical.html">
+                  <span data-feather="archive"></span>
+                  Historical
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+            <h1 class="h2">HLI Offerings 2018</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary">Share</button>
+                <button class="btn btn-sm btn-outline-secondary">Export</button>
+              </div>
+              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                <span data-feather="calendar"></span>
+                2017 Data
+              </button>
+            </div>
+          </div>
+
+          <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
+
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+            <h1 class="h2">HLI Data By Delivery Type </h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+            </div>
+          </div>
+
+          <div class="card-deck">
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">15</h5>
+                <p class="card-text">Instructor Led Courses Delivered</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 weeks ago</small>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">21</h5>
+                <p class="card-text">Instructor Led Offerings Delivered</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 weeks ago</small>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">80</h5>
+                <p class="card-text">Instructor Led Hours Delivered</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 weeks ago</small>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">56</h5>
+                <p class="card-text">Attendees (unique): Instructor Led</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 weeks ago</small>
+              </div>
+            </div>
+          </div>
+         <br>
+          <div class="card-deck">
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">8</h5>
+                <p class="card-text">Virtual Classes Delivered</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 weeks ago</small>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">15</h5>
+                <p class="card-text">Virtual Class Offerings Delivered</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 weeks ago</small>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">40</h5>
+                <p class="card-text">Virtual Class Hours Delivered</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 weeks ago</small>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">56</h5>
+                <p class="card-text">Attendees (unique): Virtual Class</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 weeks ago</small>
+              </div>
+            </div>
+          </div>
+          <br>
+          <h1 class="h2">HLI Course Categories</h1>
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Category of Courses</th>
+                  <th>Number of Courses</th>
+                  <th>Attendees</th>
+                  <th>Credits/Hrs</th>
+                  <th>Evaluation Average</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>LMS</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+                <tr>
+                  <td>PO</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+                <tr>
+                  <td>GMS</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+                <tr>
+                  <td>Leadership</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+                <tr>
+                  <td>Facilitation</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+                <tr>
+                  <td>APCEP</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+                <tr>
+                  <td>Writing</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+                <tr>
+                  <td>Adjunct Faculty</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                  <td>#</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h1 class="h2">Mandatory Courses</h1>
+            <div class="table-responsive">
+              <table class="table table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th>Course Title</th>
+                    <th>Due Date</th>
+                    <th>Completions to Date</th>
+                    <th>Owner</th>
+                    <th>Audience</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Information Security</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                  </tr>
+                  <tr>
+                    <td>Records Management</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                  </tr>
+                  <tr>
+                    <td>Whistleblower</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                  </tr>
+              </tbody>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["January", "Feburary", "March", "April", "May"],
+          datasets: [{
+            data: [13, 19, 23, 25, 18],
+            lineTension: 0,
+            backgroundColor: 'transparent',
+            borderColor: '#007bff',
+            borderWidth: 4,
+            pointBackgroundColor: '#007bff'
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: false,
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

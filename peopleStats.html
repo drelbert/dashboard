@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Dashboard Of HRSA Training Data</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">HRSA</a>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="hli.html">
+                  <span data-feather="home"></span>
+                  HLI Stats
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hrsa.html">
+                  <span data-feather="users"></span>
+                  HRSA Stats
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <span data-feather="pie-chart"></span>
+                 People Stats <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="historical.html">
+                  <span data-feather="archive"></span>
+                  Historical
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+            <h1 class="h2">HRSA Personnel Stats</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary">Share</button>
+                <button class="btn btn-sm btn-outline-secondary">Export</button>
+              </div>
+            </div>
+          </div>
+
+          <canvas class="my-4" id="myPieChart" width="400" height="400"></canvas>
+
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+            <h1 class="h2">HRSA Series Stats </h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+            </div>
+          </div>
+
+          <canvas class="my-4" id="myPieChartSeries" width="400" height="400"></canvas>
+
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+            <h1 class="h2">GS Stats Placeholder </h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+            </div>
+          </div>
+
+          <canvas class="my-4" id="myPieChartSeries" width="400" height="400"></canvas>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myPieChart");
+      var myPieChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: ['SES', 'Supervisors', 'Project Officers', 'GMS', 'Adjunct Faculty', 'Comissioned Corps'],
+            datasets: [{
+                data: [10, 75, 400, 400, 60, 150],
+                backgroundColor:['#ff9063','#ff6384','#36a2eb','#36eb42', '#ff63d2', '#9063ff']
+            }]
+          },
+          options: {
+            responsive: false
+          }
+        });
+    </script>
+    <script>
+      var ctx = document.getElementById("myPieChartSeries");
+      var myPieChartSereis = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: ['Public Health Analyst', 'Management Analyst', 'IT Specialist', 'Grants Management Specialist', 'Admin Officer', 'Advisory Committee Member', 'Other'],
+            datasets: [{
+                data: [550, 300, 75, 400, 150, 60, 300],
+                backgroundColor:['#ff9063','#ff6384','#36a2eb','#36eb42', '#ff63d2', '#9063ff', '#9063A5', ]
+            }]
+          },
+          options: {
+            responsive: false
+          }
+        });
+    </script>
+  </body>
+</html>
